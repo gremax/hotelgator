@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user, notice: "Welcome to Hotelgator, #{@user.name}!"
     else
-      flash[:alert] = "You have some errors!"
+      flash.now[:alert] = "You have some errors!"
       render :new
     end
   end
