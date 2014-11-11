@@ -1,0 +1,129 @@
+body, h1, h2, h3, ul, ol {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+/* Header  */
+header {
+  width: 768px;
+  height: 55px;
+  margin: 0 auto;
+  background-color: #3B234A;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  a {
+    color: #C3BBC9;
+    text-decoration: none;
+    &:hover {
+      color: #BAAFC4;
+    }
+  }
+  .logo {
+    display: block;
+    float: left;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 6px 15px;
+  }
+  nav {
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 18px 15px;
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+/*  Main  */
+section {
+  clear: both;
+  width: 768px;
+  margin: 0 auto;
+  .form {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/*  Footer  */
+footer {
+  width: 768px;
+  margin: 20px auto;
+  padding: 4px;
+  border-top: 1px solid #CCC;
+  font-size: 14px;
+  nav {
+    float: right;
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        margin-left: 10px;
+      }
+    }
+    a {
+      color: #777;
+      text-decoration: none;
+      &:hover {
+        color: #444;
+      }
+    }
+  }
+}
+
+/*  Typographic  */
+h1 {
+  color: #523961;
+  font-size: 25px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/*  Form fields  */
+label, input {
+  display: block;
+  font-size: 16px;
+  margin: 5px;
+}
+input {
+  padding: 3px;
+  width: 100%;
+}
+input[type=submit] {
+  width: 150px;
+}
+
+/*  Other  */
+.flash {
+  display: block;
+  padding: 10px;
+  margin: 15px;
+}
+.alert {
+  border: 1px solid #FF8C8C;
+  background-color: #FFD0D0;
+}
+.notice {
+  border: 1px solid #3B234A;
+  background-color: #C3BBC9;
+}
+.errors {
+  display: block;
+  padding: 5px;
+  margin: 10px;
+  ul {
+    list-style: none;
+    margin-left: 12px;
+  }
+}
+.field_with_errors input {
+  border: 1px solid #FF0000;
+}
