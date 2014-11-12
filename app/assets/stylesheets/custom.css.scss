@@ -5,11 +5,14 @@ body, h1, h2, h3, ul, ol {
   font-family: sans-serif;
 }
 
+header, section, footer, .debug_dump {
+  width: 768px;
+  margin: 0 auto;
+}
+
 /* Header  */
 header {
-  width: 768px;
   height: 55px;
-  margin: 0 auto;
   background-color: #3B234A;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -45,8 +48,6 @@ header {
 /*  Main  */
 section {
   clear: both;
-  width: 768px;
-  margin: 0 auto;
   .form {
     width: 400px;
     margin: 0 auto;
@@ -55,7 +56,6 @@ section {
 
 /*  Footer  */
 footer {
-  width: 768px;
   margin: 20px auto;
   padding: 4px;
   border-top: 1px solid #CCC;
@@ -126,4 +126,9 @@ input[type=submit] {
 }
 .field_with_errors input {
   border: 1px solid #FF0000;
+}
+.debug_dump {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #DDD;
 }
