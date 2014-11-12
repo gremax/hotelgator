@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110174946) do
+ActiveRecord::Schema.define(version: 20141112130610) do
+
+  create_table "addresses", force: true do |t|
+    t.string  "country"
+    t.string  "state"
+    t.string  "city"
+    t.string  "street"
+    t.integer "hotel_id"
+  end
+
+  add_index "addresses", ["country"], name: "index_addresses_on_country"
+
+  create_table "hotels", force: true do |t|
+    t.string   "title"
+    t.integer  "rating"
+    t.boolean  "breakfast"
+    t.text     "room_description"
+    t.integer  "price"
+    t.integer  "address_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hotels", ["address_id"], name: "index_hotels_on_address_id"
+  add_index "hotels", ["title"], name: "index_hotels_on_title"
+  add_index "hotels", ["user_id"], name: "index_hotels_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

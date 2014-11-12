@@ -2,6 +2,9 @@
   &copy; <%= Time.now.year %> by Hotelgator
   <nav>
     <ul>
+      <% if logged_in? %>
+      <li>Logged as <%= current_user.email %></li>
+      <% end %>
       <li><%= link_to 'About', '#' %></li>
       <li><%= link_to 'Contact', '#' %></li>
     </ul>
