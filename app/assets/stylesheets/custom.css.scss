@@ -10,6 +10,10 @@ header, section, footer, .debug_dump {
   margin: 0 auto;
 }
 
+ul {
+  list-style: none;
+}
+
 /* Header  */
 header {
   height: 55px;
@@ -36,7 +40,6 @@ header {
     font-weight: bold;
     margin: 18px 15px;
     ul {
-      list-style: none;
       li {
         display: inline;
         margin-left: 10px;
@@ -58,9 +61,6 @@ section {
   .form {
     width: 400px;
     margin: 0 auto;
-    ul {
-      list-style: none;
-    }
   }
 }
 
@@ -73,7 +73,6 @@ footer {
   nav {
     float: right;
     ul {
-      list-style: none;
       li {
         display: inline;
         margin-left: 10px;
@@ -153,7 +152,6 @@ textarea {
   padding: 5px;
   margin: 10px;
   ul {
-    list-style: none;
     margin-left: 12px;
   }
 }

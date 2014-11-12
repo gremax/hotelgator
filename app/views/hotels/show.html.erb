@@ -1,1 +1,11 @@
 <h1><%= @hotel.title %></h1>
+<ul>
+  <li>Hotel rating: <strong><%= pluralize(@hotel.rating, "Star") %></strong></li>
+  <li>Hotel address: <strong><%= @hotel.full_address %></strong></li>
+  <li>Breakfast included: <strong><%= boolean_human(@hotel.breakfast) %></strong></li>
+  <li>Price: <strong><%= number_to_currency(@hotel.price) %></strong></li>
+  <li>
+    Room description:
+    <p><%= @hotel.room_description %></p>
+  </li>
+</ul>
