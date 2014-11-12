@@ -15,4 +15,10 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+  
+  private
+  
+  def authenticate_user
+    redirect_to login_path, notice: "Please, log in." unless logged_in?
+  end
 end

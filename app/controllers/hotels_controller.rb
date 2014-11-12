@@ -1,4 +1,6 @@
 class HotelsController < ApplicationController
+  before_action :authenticate_user
+  
   def top
     @hotels = Hotel.top
   end
