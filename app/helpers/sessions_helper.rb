@@ -21,4 +21,8 @@ module SessionsHelper
   def authenticate_user
     redirect_to login_path, notice: "Please, log in." unless logged_in?
   end
+  
+  def registered_user
+    redirect_to user_path(current_user) if logged_in?
+  end
 end

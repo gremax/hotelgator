@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :registered_user, only: [:new, :create]
+  
   def new
     @user = User.new
   end
