@@ -24,6 +24,7 @@ class HotelsController < ApplicationController
     if @hotel.save
       redirect_to @hotel, notice: "The hotel successfully added"
     else
+      flash.now[:alert] = "You have some errors!"
       render :new
     end
   end
