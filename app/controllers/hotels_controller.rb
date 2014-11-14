@@ -11,8 +11,9 @@ class HotelsController < ApplicationController
     
   def show
     @hotel = Hotel.find(params[:id])
+    @comments = @hotel.comments
   end
-  
+
   def new
     @hotel = Hotel.new
     @hotel.build_address

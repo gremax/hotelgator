@@ -1,0 +1,12 @@
+<% @comments.each do |comment| %>
+<div class="comments">
+  <div class="author">
+    <%= comment.user.name %>
+    <p>My rating is <%= pluralize(comment.rating, "Star") %></p>
+    <p><%= time_ago_in_words(comment.created_at) %> ago</p>
+  </div>
+  <div class="comment">
+    <%= comment.text %>
+  </div>
+</div>
+<% end %>

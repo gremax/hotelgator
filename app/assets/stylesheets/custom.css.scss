@@ -70,6 +70,7 @@ footer {
   padding: 4px;
   border-top: 1px solid #CCC;
   font-size: 14px;
+  clear: both;
   nav {
     float: right;
     ul {
@@ -89,7 +90,7 @@ footer {
 }
 
 /*  Typographic  */
-h1, h2 {
+h1, h2, h3 {
   color: #523961;
   margin: 15px 0;  
 }
@@ -103,6 +104,10 @@ h2 {
     color: #523961;
     text-decoration: none;
   }
+}
+h3 {
+  font-size: 18px;
+  text-align: center;
 }
 
 /*  Form fields  */
@@ -131,6 +136,24 @@ textarea {
 }
 .radio_inline label, input {
   display: inline;
+}
+
+/* Comments  */
+.comments {
+  width: 600px;
+  margin: 15px auto;
+  clear: both;
+  .author {
+    float: left;
+    width: 140px;
+    p {
+      font-size: small;
+    }
+  }
+  .comment {
+    float: right;
+    width: 460px;
+  }
 }
 
 /*  Other  */

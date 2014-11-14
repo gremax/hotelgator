@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   post   'login'  => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users, only: [:show]
-  resources :hotels
+  resources :hotels do
+    resources :comments
+  end
 end

@@ -1,0 +1,15 @@
+<h3>Your comment and rating</h3>
+<% if logged_in? %>
+  <%= form_for :comment, url: hotel_comments_path(@hotel), 
+                         html: { class: "form" } do |f| %>
+    <div class="radio_inline">
+      <% ['5', '4', '3', '2', '1'].each do |star| %>
+        <%= f.radio_button :rating, star, checked: (star == '5') %> <%= star %>
+      <% end %>
+    </div>
+    <%= f.text_area :text %>
+    <%= f.submit "Leave comment" %>
+  <% end %>
+<% else %>
+  <center>Please, <%= link_to 'log in', login_path %> for comment.</center>
+<% end %>
