@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root   'hotels#index'
+  root   'hotels#top'
   get    'signup' => 'users#new'
   post   'signup' => 'users#create'
   get    'login'  => 'sessions#new'

@@ -1,0 +1,12 @@
+<h1>Top 5 hotels</h1>
+
+<ol>
+<% @hotels.each do |hotel| %>
+  <li>
+    <%= link_to hotel.title, hotel %>
+    <%= hotel.rating %>
+  </li>
+<% end %>
+</ol>
+
+<p><%= link_to "All hotels", hotels_path %></p>

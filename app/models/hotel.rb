@@ -1,7 +1,7 @@
 class Hotel < ActiveRecord::Base
   validates :title,  presence: true
   validates :rating, presence: true
-  validates :price,  presence: true
+  validates :price,  presence: true, numericality: { greater_than: 0 }
 
   belongs_to :user
   has_one    :address
@@ -17,9 +17,7 @@ class Hotel < ActiveRecord::Base
     end
   end
   
-  def rating_calc
-    comments_rating = Comment.where(hotel_id: self.id)
-    comments_rating_sum = comments_rating.sum(:rating)
-    rating = (self.rating + comments_rating_sum) / (comments_rating.count + 1)
+  def self.top
+    self.order('rating desc').limit(5)
   end
 end

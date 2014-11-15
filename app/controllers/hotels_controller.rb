@@ -1,6 +1,6 @@
 class HotelsController < ApplicationController
   before_action :authenticate_user, only: [:new, :create]
-  
+
   def top
     @hotels = Hotel.top
   end
@@ -8,7 +8,7 @@ class HotelsController < ApplicationController
   def index
     @hotels = Hotel.all
   end
-    
+
   def show
     @hotel = Hotel.find(params[:id])
     @comments = @hotel.comments
@@ -18,7 +18,7 @@ class HotelsController < ApplicationController
     @hotel = Hotel.new
     @hotel.build_address
   end
-  
+
   def create
     @hotel = current_user.hotels.new(hotel_params)
     if @hotel.save
@@ -28,9 +28,9 @@ class HotelsController < ApplicationController
       render :new
     end
   end
-    
+
   private
-  
+
   def hotel_params
     params.require(:hotel).permit(:title, :rating, :breakfast, 
                            :room_description, :price, address_attributes: 
