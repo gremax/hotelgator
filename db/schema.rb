@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112171856) do
+ActiveRecord::Schema.define(version: 20141115135356) do
 
   create_table "addresses", force: true do |t|
     t.string  "country"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20141112171856) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture"
   end
 
   add_index "hotels", ["address_id"], name: "index_hotels_on_address_id"

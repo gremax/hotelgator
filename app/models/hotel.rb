@@ -1,7 +1,9 @@
 class Hotel < ActiveRecord::Base
-  validates :title,  presence: true
-  validates :rating, presence: true
-  validates :price,  presence: true, numericality: { greater_than: 0 }
+  validates :title,   presence: true
+  validates :rating,  presence: true
+  validates :price,   presence: true, numericality: { greater_than: 0 }
+  validates :picture, format: { with: %r{\.(gif|jpg|jpeg|png)\Z}i,
+                                message: "must be JPG, GIF or PNG." }
 
   belongs_to :user
   has_one    :address

@@ -21,6 +21,7 @@ class HotelsController < ApplicationController
 
   def create
     @hotel = current_user.hotels.new(hotel_params)
+    @hotel.picture = upload_picture(params[:hotel][:picture])
     if @hotel.save
       redirect_to @hotel, notice: "The hotel successfully added"
     else
@@ -32,8 +33,17 @@ class HotelsController < ApplicationController
   private
 
   def hotel_params
-    params.require(:hotel).permit(:title, :rating, :breakfast, 
+    params.require(:hotel).permit(:title, :rating, :breakfast,
                            :room_description, :price, address_attributes: 
                            [:country, :state, :city, :street])
+  end
+  
+  def upload_picture(image)
+    image_name = (Time.now.to_i.to_s + 
+                  File.extname(image.original_filename)).downcase
+    File.open(Rails.root.join('public', 'uploads', image_name), 'wb') do |file|
+      file.write(image.read)
+    end
+    image_name
   end
 end

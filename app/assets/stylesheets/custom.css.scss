@@ -62,6 +62,21 @@ section {
     width: 400px;
     margin: 0 auto;
   }
+  img {
+    width: 200px;
+  }
+  .content {
+    width: 100%;
+    padding: 15px;
+    .photo {
+      float: left;
+      width: 205px;
+    }
+    .hotel {
+      width: 503px;
+      float: right;
+    }
+  }
 }
 
 /*  Footer  */
