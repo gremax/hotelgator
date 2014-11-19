@@ -6,7 +6,7 @@ class HotelsController < ApplicationController
   end
 
   def index
-    @hotels = Hotel.all
+    @hotels = Hotel.includes(:address).all
   end
 
   def show
