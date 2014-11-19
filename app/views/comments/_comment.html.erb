@@ -1,8 +1,9 @@
 <% @comments.each do |comment| %>
 <div class="comments">
   <div class="author">
+    <%= image_tag comment.user.avatar, alt: comment.user.name %>
     <%= comment.user.name %>
-    <p>My rating is <%= pluralize(comment.rating, "Star") %></p>
+    <p>My rating <%= pluralize(comment.rating, "Star") %></p>
     <p><%= time_ago_in_words(comment.created_at) %> ago</p>
   </div>
   <div class="comment">
