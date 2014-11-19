@@ -4,6 +4,7 @@
 <% @hotels.each do |hotel| %>
   <article>
     <h2><%= link_to hotel.title, hotel %></h2>
+    <%= image_tag "/uploads/#{hotel.picture}", alt: hotel.title %>
     <p>Rating: <strong><%= pluralize(hotel.rating, "Star") %></strong></p>
     <% if hotel.address %>
     <p><%= "#{hotel.address.country}, #{hotel.address.city}" %></p>
