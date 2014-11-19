@@ -7,7 +7,7 @@ one:
   room_description: MyText
   price: 1
   address_id: 
-  user_id: 
+  user_id: 1
 
 two:
   title: MyString
@@ -16,4 +16,4 @@ two:
   room_description: MyText
   price: 1
   address_id: 
-  user_id: 
+  user_id: 1
