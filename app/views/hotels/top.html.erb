@@ -4,7 +4,7 @@
 <% @hotels.each do |hotel| %>
   <li>
     <%= link_to hotel.title, hotel %>
-    <%= hotel.rating %>
+    (<%= pluralize(hotel.rating, "Star") %>)
   </li>
 <% end %>
 </ol>

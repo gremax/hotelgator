@@ -17,3 +17,7 @@
 
 # Ignore uploads
 /public/uploads/*
+
+# Ignore seeds
+/db/seeds.rb
+/db/seeds
