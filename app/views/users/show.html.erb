@@ -1,3 +1,15 @@
 <% provide(:title, "Profile · #{@user.name}") %>
 <%= image_tag @user.avatar, alt: @user.name, class: "avatar" %>
 <h1><%= @user.name %></h1>
+<h2>My hotels:</h2>
+<ul>
+<% @user.hotels.each do |hotel| %>
+  <li><%= link_to hotel.title, hotel %></li>
+<% end %>
+</ul>
+<h2>My comments:</h2>
+<ul>
+<% @user.comments.each do |comment| %>
+  <li><%= link_to comment.hotel.title, comment.hotel %></li>
+<% end %>
+</ul>
